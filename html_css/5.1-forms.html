@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="email">Email:</label>
+            <br>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <br>
+            <select name="age" id="age">
+                <option value="" disabled selected>Select Age</option>
+                <option value="0">15-30</option>
+                <option value="1">30-45</option>
+                <option value="2">45+</option>
+            </select>
+        </div>
+        <div>
+            <label for="message">Tell us little about yourself:</label>
+            <br>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="agree" value="true" id="check"> I agree to the <a href="5.1-forms.html"> terms of service</a>
+        </div>
+        <div>
+            <br>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>
