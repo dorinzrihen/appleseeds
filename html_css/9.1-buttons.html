@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons</title>
+    <style>
+        body{
+            background-color: #314178;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .rounded{
+            border-radius: 20px;
+        }
+
+        .big{
+            padding: 10px 30px;
+            color: white;
+        }
+
+        .medium{
+            padding: 5px 15px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .small{
+            padding: 2px 7px;
+            color: white;
+            font-size: 10px;
+        }
+
+        .flat{
+            border: 0;
+        }
+
+        .ghost{
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .green , .g_green:hover{
+            background-color: #1ebf21;
+        }
+
+        .green:hover{
+            background-color: #19b21c;
+        }
+
+        .red , .g_red:hover{
+            background-color: #bf1b1b;
+        }
+
+        .red:hover{
+            background-color: #a51818;
+        }
+
+        .blue , .g_blue:hover{
+            background-color: #198cb8;
+        }
+
+        .blue:hover{
+            background-color: #187ea5;
+        }
+
+        .orange, .g_orange:hover{
+            background-color: #bf7325;
+        }
+
+        .orange:hover {
+            background-color: #b26a21;
+        }
+
+        .yellow, .g_yellow:hover{
+            background-color: #d2ca13;
+        }
+
+        .yellow:hover {
+            background-color: #ccc416;
+        }
+
+        .gray, .g_gray:hover{
+            background-color: #b2b2b2;
+        }
+
+        .gray:hover {
+            background-color:#969696;
+        }
+
+        .g_green{
+            border:2px solid #1ebf21 ;
+        }
+
+        .g_red{
+            border:2px solid #bf1b1b ;
+        }
+
+        .g_blue{
+            border:2px solid #198cb8 ;
+        }
+
+        .g_orange{
+            border:2px solid #bf7325 ;
+        }
+        
+        .g_yellow{
+            border:2px solid #d2ca13 ;
+        }
+
+        .g_gray{
+            border:2px solid #b2b2b2 ;
+        }
+    </style>
+</head>
+<body>
+    <div>Flat</div>
+    <button class="flat big green">Register</button>
+    <button class="medium flat red">Clear</button>
+    <button class="flat blue small">Submit</button>
+    <br>
+    <br>
+    <div>Round</div>
+    <button class="rounded flat big orange">Register</button>
+    <button class="medium rounded flat yellow">Clear</button>
+    <button class="rounded flat small gray">Submit</button>
+    <br>
+    <br>
+    <div>Flat Ghost</div>
+    <button class="big ghost g_green">Register</button>
+    <button class="medium ghost g_red">Clear</button>
+    <button class="ghost small g_blue">Submit</button>
+    <br>
+    <br>
+    <div>Round ghost</div>
+    <button class="big rounded ghost g_orange">Register</button>
+    <button class="medium rounded ghost g_yellow">Clear</button>
+    <button class="rounded ghost small g_gray">Submit</button>
+</body>
+</html>

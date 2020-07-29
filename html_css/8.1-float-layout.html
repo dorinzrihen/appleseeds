@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float layout</title>
+    <style>
+        .layout{
+            width: 500px;
+            height: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+        
+        .clr{
+            clear: both;
+        }
+
+        header{
+            background-color: orange;
+            height: 14%;
+            border: 1px solid black;
+            margin-bottom: 1%;
+        }
+
+        header div{
+            text-align: center;
+        }
+
+        aside{
+            background-color: green;
+            width: 29%;
+            height: 70%;
+            float: left;;
+            border: 1px solid black;
+            margin-right: 1%;
+        }
+
+        aside div{
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+
+        section{
+            background-color: purple;
+            width: 69%;
+            height: 70%;
+            float: right;
+            border: 1px solid black;
+        }
+
+        section div{
+            text-align: right;
+            padding-right: 5%;
+            padding-top: 5%;
+        }
+
+        footer{
+            background-color: blue;
+            border: 1px solid black;
+            height: 14%;
+            margin-top: 1%;
+        }
+
+        footer div{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="layout">
+            <header>
+                <div>Header</div>
+            </header>
+            <aside>
+                <div>Side</div>
+            </aside>
+            <section>
+                <div>Main</div>
+            </section>
+            <div class="clr"></div>
+            <footer>
+                <div>Footer</div>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
