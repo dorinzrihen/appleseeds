@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appleseeds</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+
+        .flexcontainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+        .item{
+            margin: 0px 10px;
+        }
+
+        .title{
+            font-size: 2rem;
+            flex-grow: 1;
+
+        }
+
+
+        .item-one, .item-two, .item-tree{
+            font-size: 1.2rem;
+        }
+
+        @media(max-width: 600px){
+            .flexcontainer{
+                height: 50vh;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .title{
+                flex-grow: 0;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            .item{
+                margin: 20px 0px;
+                text-align: center;
+            }
+
+            .item-one, .item-two, .item-tree{
+            font-size: 1.5rem;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="flexcontainer">
+        <div class="item title">APPPLESEEDS
+        </div>
+        <div class="item item-one">HOME
+        </div>
+        <div class="item item-two">ABOUT
+        </div>
+        <div class="item item-tree">PORTFOLIO
+        </div>
+        <div class="item item-tree">CONTACT
+        </div>
+    </div>
+</body>
+</html>

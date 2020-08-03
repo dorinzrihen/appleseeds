@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive text</title>
+    <style>
+
+        .right{
+            float: right;
+            width: 40%;
+            height: 500px;
+            background-color: yellow;
+        }
+
+        .left{
+            float: left;
+            width: 60%;
+            height: 500px;
+        }
+
+        @media(max-width: 500px){
+            .right{
+                display: none;
+            }
+
+            .left{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="right">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </aside>
+        <section class="left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vero ipsa temporibus maiores magni perspiciatis eveniet nostrum quia, perferendis, beatae iste velit sunt a optio quis, soluta aut aliquam exercitationem necessitatibus nesciunt. Totam aspernatur optio recusandae atque odio facere necessitatibus, animi qui quas modi dicta repudiandae perspiciatis at? Eaque, sed.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vero ipsa temporibus maiores magni perspiciatis eveniet nostrum quia, perferendis, beatae iste velit sunt a optio quis, soluta aut aliquam exercitationem necessitatibus nesciunt. Totam aspernatur optio recusandae atque odio facere necessitatibus, animi qui quas modi dicta repudiandae perspiciatis at? Eaque, sed.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vero ipsa temporibus maiores magni perspiciatis eveniet nostrum quia, perferendis, beatae iste velit sunt a optio quis, soluta aut aliquam exercitationem necessitatibus nesciunt. Totam aspernatur optio recusandae atque odio facere necessitatibus, animi qui quas modi dicta repudiandae perspiciatis at? Eaque, sed.</p>
+        </section>
+    </div>
+</body>
+</html>
