@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            box-sizing: border-box;
+            padding: 50px;
+        }
+        a{
+            position: relative;
+            display: inline-block;
+        }
+
+        a[tool-tip]:hover::before{
+            text-align: center;
+            font-size: 12px;
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            top: -30px;
+            right: -30px;
+            position: absolute;
+            background-color: pink;
+            content: attr(tool-tip);
+            z-index: 1;
+        }
+
+        a[tool-tip]:hover::after{
+            position:absolute;
+            content: "";
+            top: -1px;
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid pink;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <a href=”#” tool-tip="More info about Consequatur">Consequatur</a> 
+        nostrum vero iusto amet, fuga, libero quam saepe iure repellat autem nihil totam. Ipsam inventore voluptates repellendus, sapiente veniam odio ullam esse cum? Nisi atque fuga excepturi sequi quis ipsam, nostrum consequatur aliquam quam. 
+        <a href=”#” tool-tip="info info info">Perspiciatis</a> ab enim molestiae reprehenderit ex impedit repudiandae necessitatibus velit cupiditate fugit voluptatum sequi nesciunt, ipsa maiores quisquam doloremque magnam distinctio iure accusamus earum inventore? Voluptas, quod nesciunt ea quas harum 
+        <a href=”#” tool-tip="distinctio? info.">distinctio</a> molestias labore atque libero tempora autem quia minus facilis at perspiciatis laboriosam, unde veritatis, esse a. Natus, neque? Commodi sapiente quis veritatis iusto quos repudiandae.
+    </div>
+</body>
+</html>

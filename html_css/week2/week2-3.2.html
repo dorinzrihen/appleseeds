@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            position: relative;
+            text-decoration: none;
+            display: inline;
+            margin: 0px 30px;
+            padding: 2px;
+        }
+
+        li:hover::before{
+            top:0px;
+            content: "";
+            position: absolute;
+            height: 1px;
+            animation: ani1 0.3s forwards;
+        }
+
+        li:hover::after{
+            bottom:0px;
+            content: "";
+            position: absolute;
+            height: 1px;
+            animation: ani2 0.3s forwards;
+        }
+
+        @keyframes ani1 {
+            from{
+                background-color: rgba(0,0,0,0);
+                width: 0px;
+                top: 0px;
+                left: 0px;
+            }
+            to{
+                background-color: rgba(0,0,0,1);
+                width: 100%;
+            }
+        }
+
+        @keyframes ani2 {
+            from{
+                background-color: rgba(0,0,0,0);
+                width: 0px;
+                bottom: 0px;
+                left:100%
+            }
+            to{
+                background-color: rgba(0,0,0,1);
+                width: 100%;
+                left:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="style-li">Home</li>
+            <li class="style-li">About</li>
+            <li class="style-li">Service</li>
+            <li class="style-li">Portfolio</li>
+            <li class="style-li">Contact</li>
+        </ul>
+    </div>
+</body>
+</html>

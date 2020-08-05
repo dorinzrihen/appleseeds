@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(37, 11, 70);
+        }
+
+
+        .circle-1{
+            position: relative;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: #f4f4f4 3px solid;
+            animation: ani 1s infinite;
+        }
+
+
+        #spinner, #spinner-2{
+            width: 50px;
+            height: 30px;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            
+
+        }
+        .dot, .dot-two{
+            width: 5px;
+            height: 5px;
+            border-radius: 50px;
+            background-color: lightgrey;
+        }
+
+        .dot-two{
+            background-color:rgb(48, 170, 139) ;
+                  
+        }
+
+        .dot-1{
+            animation: ani1 1s infinite;
+        }
+
+        .dot-2{
+            animation: ani1 1s infinite 0.33s;
+        }
+
+        .dot-3{
+            animation: ani1 1s infinite 0.66s;
+        }
+
+        /*~~~~~~~~~~~~~~~~~~~~~~*/
+
+        .dot-1-1{
+            animation: ani2 1s infinite;
+        }
+
+        .dot-2-2{
+            animation: ani2 1s infinite 0.33s;
+        }
+
+        .dot-3-3{
+            animation: ani2 1s infinite 0.66s;
+        }
+
+        @keyframes ani {
+            25%{
+                border-top:rgb(48, 170, 139) 3px solid;
+            }
+            50%{
+                border-left:rgb(48, 170, 139) 3px solid;
+            }
+            75%{
+                border-bottom:rgb(48, 170, 139) 3px solid;
+            }
+            100%{
+                border-right:rgb(48, 170, 139) 3px solid;
+            }
+        }
+
+        @keyframes ani1 {
+            33%{
+                background-color: rgb(48, 170, 139);         
+            }
+        }
+
+        
+        @keyframes ani2 {
+            33%{
+                align-self: flex-start;   
+            }
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="circle-1"></div>
+
+    <div id="spinner">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+    </div> 
+    
+    <div id="spinner-2">
+        <div class="dot-two dot-1-1"></div>
+        <div class="dot-two dot-2-2"></div>
+        <div class="dot-two dot-3-3"></div>
+    </div> 
+
+    
+</body>
+</html>
