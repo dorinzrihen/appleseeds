@@ -3,13 +3,13 @@ school = {
         {
             name: "Bar",
             subject: ["photoshop"],
-            students: ["random","random","random","random","random"],
+            students: [],
             capacity: 2,
         },
         {
             name: "boaz",
             subject: ["programing","photoshop"],
-            students: ["random","random","random","random","random"],
+            students: [],
             capacity: 1,
         },
     ],
@@ -38,7 +38,7 @@ function assignStudent(student,subject){
     let studentName = school.students.find(element => element.name ===student);
     let teachersOptions =school.teachers.filter(element => (element.subject.includes(subject)) && element.capacity > 0);
     if(teachersOptions.length){
-        teachersOptions[0].students.push(studentName.name);
+        teachersOptions[0].students.push(studentName);
         teachersOptions[0].capacity--;
         studentName["Study-topic"] = subject;
         return;
@@ -56,5 +56,6 @@ assignStudent('Gal','photoshop');
 
  console.log(school);
 //  console.log(school.teachers[0].students)
-//  console.log(school.teachers[1].students)
+console.log(school.teachers[1].students)
+console.log(school.teachers[0].students)
 // console.log(school);
