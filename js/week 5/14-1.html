@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // What is wrong with this code?
+        // - a - code crash with "Uncaught TypeError: arr1 is undefined".
+        // 1. First find the line that contains the problem. Write it down.
+        // - a - getSum([1,2,3][5,66,23]) 
+        // 2. Which debug method did you use to find the bug?
+        // - a - F12 , the html put yellow mark on the bad line.
+        // 3. Explain the bug in your own words.
+        // - a - 1. no , between arrays.
+        // ---2 - const sum = cant change the value of const.
+        // ---3 - no return value.
+        // 4. Fix the code and submit it all.
+        function getSum(arr1, arr2){
+            let sum = 0;
+            for (let i=0; i < arr1.length; i++){
+            sum += arr1[i];
+            }
+            for (let i=0; i < arr2.length; i++){
+            sum += arr2[i];
+            }
+            return sum;
+        }
+
+        console.log(getSum([1,2,3],[5,66,23]));
+    </script>
+</body>
+</html>

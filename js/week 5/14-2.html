@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // What is wrong with this code?
+        // 1. First find the line that contains the problem. Write it down.
+        // - a - Uncaught ReferenceError: findSmalest is not defined.
+        // 2. Which debug method did you use to find the bug ? 
+        // - a -  F12 - show me the error in line 27 (findSmalest(52,66, 2);) and with debugger breakpoint
+        // 3. Explain the bug in your own words.
+        // - a - typo
+        // - 2. now in the (if) we see with the debugger that only 2 have values, because the if (a>b>c) dont declare good. 
+        // 4. Fix the code and submit it all.
+        function findSmallest(a, b, c){
+            if (c > b && c > a){
+                return c;
+            } else if (a > c && a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+
+        console.log(findSmallest(52,66, 2));
+    </script>
+</body>
+</html>

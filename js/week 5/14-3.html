@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+            //.1. First find the line that contains the problem. Write it down.
+            // a - return arr[2] + arr[4] + arr[6] + arr[8] + arr[10];
+            // 2. Which debug method did you use to find the bug?
+            // - we put debugger before the return and see what the arr data we use.
+            // 3. Explain the bug in your own words.
+            // array start from zero index so we have only index 9. arr[10] is undefine.
+            // 4. Fix the code and submit it all.
+            function getSumOfEven(arr){
+            debugger;
+            return arr[0] + arr[2] + arr[4] + arr[6] + arr[8];
+            }
+            
+            console.log(getSumOfEven([1,2,3,4,5,6,7,8,9,10]));
+
+    </script>
+</body>
+</html>

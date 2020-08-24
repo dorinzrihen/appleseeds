@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --fontsize : 10px;
+        }
+        p{
+            font-size: var(--fontsize);
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sed, esse, iste accusamus nam animi earum cumque voluptate quod pariatur et. Beatae libero placeat tempora! Temporibus, veritatis voluptate magnam nobis eum, perferendis est quia voluptates deleniti error officiis alias repellat adipisci, quasi asperiores at doloremque. Sapiente quibusdam possimus odio porro!</p>
+    <button class='plus'>+</button>
+    <button class='minus'>-</button>
+
+    <script>
+        let fontSize = 10;
+        let text = document.querySelector('p');
+        text.style['font-size'] = "12px"; 
+
+        //btn plus
+        const plusBtn = document.querySelector('.plus');
+        plusBtn.addEventListener('click', function(){
+            fontSize++;
+            if(fontSize < 100) text.style['font-size'] = `${fontSize}px`; 
+        })
+
+        const minusBtn = document.querySelector('.minus');
+        minusBtn.addEventListener('click', function(){
+            fontSize--;
+            if(fontSize > 6) text.style['font-size'] = `${fontSize}px`; 
+        })
+
+    </script>
+</body>
+</html>

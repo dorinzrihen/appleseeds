@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Why are you interested in this position?</p>
+    <textarea class="txtArea" cols="30" rows="5"></textarea>
+    <button>Click here</button>
+    <P class=problem-msg></P>
+
+    <script>
+        const submitBtn = document.querySelector('button');
+        submitBtn.addEventListener('click', function(){
+            const textMsg = document.querySelector('.txtArea').value;
+            const problemsMsg = document.querySelector('.problem-msg');
+            if(textMsg.length < 100){  
+                problemsMsg.textContent = 'Please enter at least 100 letters in the message';
+            }
+            else{
+                problemsMsg.textContent = '';
+            }
+        })
+    </script>
+</body>
+</html>
