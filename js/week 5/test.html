@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+       
+    </style>
+    <title> Font size changer </title>
+</head>
+
+<body>
+    <button id='btnlarger'>+</button>
+    <p id='fonts'>Hello, this is a sentence.</p>
+    <button id='btnsmaller'>-</button>
+    <script>
+        let i = 30;
+
+        const t = document.getElementById("fonts");
+        const b1= document.getElementById("btnlarger");
+        const b2= document.getElementById("btnsmaller");
+
+        b1.addEventListener("click", larger);
+        b2.addEventListener("click", smaller);
+
+        t.style.fontSize = i + "px";
+        function larger() {
+            console.log("work")
+            if (i < 100) {
+                i++;
+                document.getElementById("fonts").style.fontsize = i + "px";
+            }
+        }
+        function smaller() {
+            if (i > 6) {
+                i--;
+                document.getElementById("fonts").style.fontsize = i + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>

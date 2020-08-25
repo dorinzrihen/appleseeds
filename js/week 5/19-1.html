@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>How many smileys do you want to see?</p>
+    <input type="text">
+    <button>submit</button>
+    <div class="smile-space"></div>
+
+    <script>
+        const smile = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Smile_Lirion.svg/225px-Smile_Lirion.svg.png" alt="smile"} width="100px">`;
+        const divSmile = document.querySelector(".smile-space");
+        const submitBtn = document.querySelector("button");
+
+        submitBtn.addEventListener("click",function(){
+            const input = document.querySelector("input");
+            if(Number(input.value)){
+                divSmile.innerHTML = smile.repeat(Number(input.value));
+            }
+            else{
+                divSmile.innerHTML = "PUT A NUMBER!"
+            }
+        })
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <body style = "background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg')">
+    <h1 style = "text-align: center;">Welcome to my Website</h1>
+    <button>More info</button><button>contact us</button> -->
+    <script>
+        const myBody = document.querySelector('body');
+        myBody.style['background-image'] = "url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg')";
+        const title = document.createElement('div');
+        myBody.style['color'] = "white";
+        myBody.style['text-align'] = "center";
+        title.textContent = "Welcome to my Website";
+        title.style['margin-top'] = '30vh';
+        title.style['font-size'] = '60px'
+        document.body.appendChild(title);
+        const btnContainer = document.createElement('div');
+        btnContainer.innerHTML = '<button>More info</button><button>contact us</button>';
+        btnContainer.style['padding-top'] = "50px"
+        document.body.appendChild(btnContainer);
+    </script>
+</body>
+</html>
