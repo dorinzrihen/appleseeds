@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. What is wrong with the code? explain in your own words
+        a -  hero.getStrength - need to call the function and "getStrength() < myStrength" -> without () , (already return a number inside the function)
+    2. Fix the code so that invoking the whoIsStronger function will print "I am
+    stronger". -->
+    <script>
+        const hero = {
+            health: 5,
+            power: 68,
+            getStrength: function(){
+                if (this.health <= 5){
+                    return this.power - 10;
+                } else return this.power;
+                }
+            }
+
+            function whoIsStronger(getStrength){
+                const myStrength = 82;
+                
+                if (getStrength < myStrength){
+                    return "I am stronger";
+                } else return "You are stronger";
+            }
+            console.log(whoIsStronger(hero.getStrength()));
+    </script>
+</body>
+</html>

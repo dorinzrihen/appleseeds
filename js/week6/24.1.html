@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 50px;
+            height: 75px;
+            background-color: pink;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class='box hour'>00</div>
+    <p>:</p>
+    <div class='box min'>00</div>
+    <p>:</p>
+    <div class='box sec'>00</div>
+    <script>
+
+        function refresh(){
+            let time = new Date();
+            let hour = document.querySelector('.hour');
+            let min = document.querySelector('.min');
+            let sec = document.querySelector('.sec');
+            hour.innerHTML = time.getHours();
+            min.innerHTML = time.getMinutes();
+            time.getSeconds() < 10 ? sec.innerHTML = `0${time.getSeconds()}` : sec.innerHTML = time.getSeconds();
+        }
+
+        setInterval(refresh,1000);
+
+        
+    </script>
+</body>
+</html>

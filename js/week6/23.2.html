@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class='minutes'>00</div>
+        <p>:</p>
+        <div class='seconds'>00</div>
+        <p>:</p>
+        <div class='milliseconds'>00</div>
+    </div>
+
+    <button class='start'>start</button><button class='stop'>stop</button>
+
+    <script>
+
+        let  minutes=0;
+        let seconds=0;
+        let milliseconds=0;
+
+        let timerLoop;
+
+        function startCount(){
+            milliseconds++;
+            
+            if(milliseconds >= 59){
+                seconds++;
+                milliseconds = 0;
+            }
+            else if(seconds >= 59){
+                minutes++;
+                seconds = 0;
+            }
+
+            else if(minutes > 59){
+                clearInterval(timerLoop);
+            }
+            let watchMinutes = document.querySelector('.minutes');
+            let watchSeconds = document.querySelector('.seconds');
+            let watchMilliseconds = document.querySelector('.milliseconds');
+
+            milliseconds < 10 ?  watchMilliseconds.innerHTML = `0${milliseconds}`:watchMilliseconds.innerHTML = milliseconds;
+            minutes < 10 ?  watchMinutes.innerHTML = `0${minutes}`: watchMinutes.innerHTML = minutes;
+            seconds < 10 ?  watchSeconds.innerHTML = `0${seconds}`: watchSeconds.innerHTML = seconds;
+        }
+
+  
+        let startWatch = document.querySelector('.start');
+        startWatch.addEventListener('click', function() {
+            timerLoop = setInterval(startCount,10)})
+
+        let stopWatch = document.querySelector('.stop');
+        stopWatch.addEventListener('click',function(){
+            clearInterval(timerLoop);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="bulb"></div>
+
+    <script>
+        const myBulb = document.querySelector('.bulb');
+
+        const myOffBulb = `<img src="/off.png" alt="offlight">`;
+        const onBulb = `<img src="/on.png" alt="onlight">`;
+
+        myBulb.innerHTML = myOffBulb;
+        
+        myBulb.addEventListener('click', function(event){
+            if(event.target.alt === 'offlight'){
+                myBulb.innerHTML = onBulb;
+            }
+            else{
+                myBulb.innerHTML = myOffBulb;
+            }     
+        });
+    </script>
+</body>
+</html>

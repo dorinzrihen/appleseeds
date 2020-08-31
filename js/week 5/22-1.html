@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="my-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="name">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="name">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        const myForm = document.querySelector('[name = "my-form"]')
+        myForm.addEventListener('submit',function(event){
+            const areYouSureMsg = confirm(`are you sure about this information? 
+            Name: ${event.currentTarget.name.value}
+            age: ${event.currentTarget.age.value} 
+            Name: ${event.currentTarget.email.value}`);
+            if(areYouSureMsg){
+                alert(`congratulations you successfully sent this form`) ;  
+            }
+        })
+    </script>
+</body>
+</html>
