@@ -1,0 +1,13 @@
+.box{
+    background-color: cornflowerblue;
+    margin-bottom: 5px;
+    animation-name: move;
+    position: relative;
+    animation-duration: 3s;
+}
+
+@keyframes move {
+    from {left:-100%;}
+    to {left: 0px}
+  }
+  

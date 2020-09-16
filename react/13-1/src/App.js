@@ -1,11 +1,15 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import BoxConatiner from './BoxContainer';
+import CardContainer from './CardContainer';
+
 
 function App() {
   return (
     <div className="App">
-        <BoxConatiner/>
+          <div>
+            <CardContainer/>
+          </div>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import BoxConatiner from './BoxContainer';
+import MyForm from './MyForm';
 
 function App() {
   return (
     <div className="App">
-        <BoxConatiner/>
+      <MyForm/>
     </div>
   );
 }

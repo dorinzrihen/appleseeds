@@ -1,13 +1,16 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import BoxConatiner from './BoxContainer';
+import Container from './Container';
 
 function App() {
   return (
     <div className="App">
-        <BoxConatiner/>
+        <Container></Container>
     </div>
   );
 }
 
 export default App;
+
+

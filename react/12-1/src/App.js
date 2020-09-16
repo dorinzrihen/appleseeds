@@ -1,11 +1,11 @@
 import React from 'react';
+import ChuckNorrisJokes from './ChuckNorrisJokes';
 import './App.css';
-import BoxConatiner from './BoxContainer';
 
 function App() {
   return (
-    <div className="App">
-        <BoxConatiner/>
+    <div>
+      <ChuckNorrisJokes/>
     </div>
   );
 }
