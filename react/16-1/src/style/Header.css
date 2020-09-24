@@ -1,0 +1,20 @@
+.header{
+    background-color: #999999;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header li {
+    list-style: none;
+    padding: 10px;
+}
+
+.header li:hover {
+    background-color: gray;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}

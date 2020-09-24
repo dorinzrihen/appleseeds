@@ -1,0 +1,8 @@
+.homepage{
+    background-color: rgba(151, 151, 151, 0.397);
+    height: calc(100vh - 50px);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
