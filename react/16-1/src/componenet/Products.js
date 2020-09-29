@@ -20,7 +20,7 @@ class Products extends React.Component {
               })}
             </ul>
           </div>
-          
+          <Route exact path="/products/:id" component={ProductCard}></Route>
         </BrowserRouter>
       </div>
     );
