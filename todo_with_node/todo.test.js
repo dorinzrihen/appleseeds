@@ -1,45 +1,46 @@
-const todo = require('./todo');
+const todo = require("./todo");
 
-describe('todo', () => {
-    describe('test functions', () => {
-        it('should return list status', () => {
-            const result = todo.listStatus();
+describe("todo", () => {
+  describe("to do options", () => {
+    it("should add new task", () => {
+      const result = todo.addItem("new task");
 
-            const expected = [
-                '### undone ###',
-                'id: 2 task: test2',
-                'id: 3 task: test2',
-                '### done ###',
-                'id: 1 task: test'
-              ];
+      const expected = "[UPDATE] db";
 
-            expect(result).toEqual(expected);
-        });
-
-        
-        it('should add new task', () => {
-            const result = todo.addItem("new task");
-
-            const expected = "[UPDATE] db";
-
-            expect(result).toEqual(expected);
-        });
-
-        it('should delete task', () => {
-            const result = todo.deleteItem("1");
-
-            const expected = [ { id: '1', task: 'test' } ];
-
-            expect(result).toEqual(expected);
-        });
-
-        it('should delete task', () => {
-            const result = todo.deleteItem("1");
-
-            const expected = [ { id: '1', task: 'test' } ];
-
-            expect(result).toEqual(expected);
-        });
-
+      expect(result).toEqual(expected);
     });
+
+    it("should delete task with id", () => {
+      const result = todo.deleteItem("780");
+
+      const expected = [{ id: "780", task: "hi" }];
+
+      expect(result).toEqual(expected);
+    });
+
+    it("should delete task with task name", () => {
+      const result = todo.deleteItem("test2");
+
+      const expected = [{ id: "2", task: "test2" }];
+
+      expect(result).toEqual(expected);
+    });
+
+    it("should mark as done task", () => {
+      const result = todo.markAsDone("450");
+
+      const expected = { id: "450", task: "test10" };
+
+      expect(result).toEqual(expected);
+    });
+
+    it("should not found the task", () => {
+      const result = todo.markAsDone("9999");
+
+      const expected = -1;
+
+      expect(result).toEqual(expected);
+    });
+
+  });
 });

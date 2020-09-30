@@ -2,8 +2,12 @@ let toDo = {
   undone: [
     { id: "2", task: "test2" },
     { id: "3", task: "test2" },
+    { id: "450", task: "test10" },
+    { id: "345", task: "test50" },
   ],
-  done: [{ id: "1", task: "test" }],
+  done: [{ id: "780", task: "hi" },
+  { id: "451", task: "there" },
+  { id: "34", task: "lilia" }],
 };
 
 function randomNumber() {
@@ -28,13 +32,13 @@ function addItem(item) {
 function removeFromApp(item, option) {
   for (const i in toDo) {
     for (let index = 0; index < toDo[i].length; index++) {
-      if (item == toDo[i][index][option]) {
+      if (item === toDo[i][index][option]) {
         const deletedItem = toDo[i].splice(index, 1);
         return deletedItem;
       }
     }
   }
-  return '[ERROR]';
+  return -1;
 }
 
 function deleteItem(item) {
@@ -52,7 +56,11 @@ function markAsDone(item) {
   } else {
     savedItem = removeFromApp(item, "task");
   }
-  toDo.done.push(...savedItem);
+  if(!savedItem){
+    toDo.done.push(...savedItem);
+    return toDo.done[toDo.done.length-1];
+  }
+  return -1
 }
 
 function unmarkAsDone(item) {
@@ -80,7 +88,7 @@ function listStatus() {
 function main() {
   addItem("go to the vet");
   // console.log(listStatus());
-  console.log(deleteItem("1")); 
+  console.log(markAsDone("9999")); 
   // console.log(listStatus());
   // markAsDone("2");
   // console.log(listStatus());
@@ -88,7 +96,7 @@ function main() {
   // console.log(listStatus());
 }
 
-//main();
+main();
 
 module.exports = {
   checkIfId,
