@@ -1,0 +1,15 @@
+{
+  "name": "todo-with-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo.js",
+  "dependencies": {
+    "jest": "^26.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -16,7 +16,13 @@ function checkIfId(item) {
 }
 
 function addItem(item) {
-  toDo.undone.push({ id: randomNumber(), task: item });
+  try{
+    toDo.undone.push({ id: randomNumber(), task: item });
+    return "[UPDATE] db"
+  }
+  catch{
+    return "[ERROR] db"
+  }
 }
 
 function removeFromApp(item, option) {
@@ -28,13 +34,14 @@ function removeFromApp(item, option) {
       }
     }
   }
+  return '[ERROR]';
 }
 
 function deleteItem(item) {
   if (checkIfId(item)) {
-    removeFromApp(item, "id");
+    return removeFromApp(item, "id");
   } else {
-    removeFromApp(item, "task");
+    return removeFromApp(item, "task");
   }
 }
 
@@ -63,7 +70,7 @@ function listStatus() {
   for (const i in toDo) {
     listStatus.push(`### ${i} ###`);
     for (let index = 0; index < toDo[i].length; index++) {
-      listStatus.push(`id:${toDo[i][index].id} task:${toDo[i][index].task}`);
+      listStatus.push(`id: ${toDo[i][index].id} task: ${toDo[i][index].task}`);
     }
   }
   // Done items should be at the bottom of the list.
@@ -72,13 +79,23 @@ function listStatus() {
 
 function main() {
   addItem("go to the vet");
-  console.log(listStatus());
-  deleteItem("go to the vet");
-  console.log(listStatus());
-  markAsDone("2");
-  console.log(listStatus());
-  unmarkAsDone("2");
-  console.log(listStatus());
+  // console.log(listStatus());
+  console.log(deleteItem("1")); 
+  // console.log(listStatus());
+  // markAsDone("2");
+  // console.log(listStatus());
+  // unmarkAsDone("2");
+  // console.log(listStatus());
 }
 
-main();
+//main();
+
+module.exports = {
+  checkIfId,
+  addItem,
+  removeFromApp,
+  deleteItem,
+  markAsDone,
+  unmarkAsDone,
+  listStatus,
+};
