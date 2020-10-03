@@ -1,0 +1,16 @@
+{
+  "name": "omri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csv-parser.js",
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "jest": "^26.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
