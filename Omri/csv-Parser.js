@@ -50,6 +50,7 @@ function updateInfo(header, info) {
     return infoAsJson;
   });
   console.log(jsonInfo);
+  return jsonInfo;
 }
 
 function splitData(csvData) {
